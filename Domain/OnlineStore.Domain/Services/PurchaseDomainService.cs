@@ -1,4 +1,5 @@
-﻿using OnlineStore.Domain.Orders;
+﻿using OnlineStore.Domain.Exceptions;
+using OnlineStore.Domain.Orders;
 using OnlineStore.Domain.Orders.Factories;
 using OnlineStore.Domain.Products;
 using OnlineStore.Domain.Users;
@@ -31,13 +32,13 @@ namespace OnlineStore.Domain.Services
         private static void GuardAgainstNotExistingUsers(User? buyer)
         {
             if (buyer == null)
-                throw new Exception("User not exist");
+                throw new UserNotFoundException();
         }
 
         private static void GuardAgainstNotChargedProductsBeingPurchased(Product product)
         {
             if (product?.InventoryCount == 0)
-                throw new Exception("Product not charged yet!");
+                throw new NonExistentDemandException();
         }
     }
 }

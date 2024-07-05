@@ -10,6 +10,7 @@ using OnlineStore.Domain.Products;
 using OnlineStore.Domain.Services;
 using OnlineStore.Infrastructure.Persistence.EF;
 using OnlineStore.Infrastructure.Persistence.EF.Products;
+using OnlineStore.Interface.WebApi.Services;
 using Unchase.Swashbuckle.AspNetCore.Extensions.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -41,7 +42,7 @@ var app = builder.Build();
 
 app.UseHttpsRedirection();
 
-
+app.ConfigureExceptionHandling();
 app.UseRouting();
 app.UseSwagger();
 app.UseSwagger();

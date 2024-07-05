@@ -1,5 +1,6 @@
 using FluentAssertions;
 using NSubstitute;
+using OnlineStore.Domain.Exceptions;
 using OnlineStore.Domain.Products;
 using OnlineStore.Domain.Services;
 using OnlineStore.Domain.Tests.Utils;
@@ -38,7 +39,7 @@ namespace OnlineStore.Domain.Tests.Unit
             Action expectedProduct = () =>
                 _productTestBuilder.WithTitle(product.Title).WithProductDomainService(_productDomainService).Build();
 
-            expectedProduct.Should().Throw<Exception>();
+            expectedProduct.Should().Throw<DuplicatedProductNameException>();
         }
 
 

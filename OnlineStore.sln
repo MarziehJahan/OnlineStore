@@ -39,6 +39,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Cache", "Cache", "{E5E7EA8D
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Framework.Cache", "Framework\Cache\Framework.Cache\Framework.Cache.csproj", "{0F6A0ACA-2D1F-4BE4-A45B-6C281DD60F02}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Exception", "Exception", "{02CDDF6C-26A3-4D55-BB03-A9C1F137BBE6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Framework.Exception", "Framework\Exception\Framework.Exception\Framework.Exception.csproj", "{3CAD4C27-8584-4484-B7C9-BDE904087866}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -81,6 +85,10 @@ Global
 		{0F6A0ACA-2D1F-4BE4-A45B-6C281DD60F02}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0F6A0ACA-2D1F-4BE4-A45B-6C281DD60F02}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0F6A0ACA-2D1F-4BE4-A45B-6C281DD60F02}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3CAD4C27-8584-4484-B7C9-BDE904087866}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3CAD4C27-8584-4484-B7C9-BDE904087866}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3CAD4C27-8584-4484-B7C9-BDE904087866}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3CAD4C27-8584-4484-B7C9-BDE904087866}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -101,6 +109,8 @@ Global
 		{B656224B-E31A-402D-8AE1-A5A4D33026FE} = {913497EA-B80B-4FD3-BE97-A9FE3EE0B441}
 		{E5E7EA8D-13AC-4EC2-A807-0AB2401DBF96} = {76EB4B20-BF45-4B7B-B83D-5A1BAEEDFEE2}
 		{0F6A0ACA-2D1F-4BE4-A45B-6C281DD60F02} = {E5E7EA8D-13AC-4EC2-A807-0AB2401DBF96}
+		{02CDDF6C-26A3-4D55-BB03-A9C1F137BBE6} = {76EB4B20-BF45-4B7B-B83D-5A1BAEEDFEE2}
+		{3CAD4C27-8584-4484-B7C9-BDE904087866} = {02CDDF6C-26A3-4D55-BB03-A9C1F137BBE6}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {EF0D8CF6-01CC-4BE6-81D5-D548F4CD064E}

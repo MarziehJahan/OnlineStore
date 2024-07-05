@@ -1,4 +1,5 @@
-﻿using MediatR;
+﻿using Framework.Exception;
+using MediatR;
 using OnlineStore.Application.Contract.Products;
 using OnlineStore.Domain.Products;
 using OnlineStore.Domain.Products.Factories;
@@ -47,6 +48,11 @@ namespace OnlineStore.Application.Products
                 buyer.AddOrder(order);
                 await _context.SaveChangesAsync(cancellationToken);
                 await transaction.CommitAsync(cancellationToken);
+            }
+            catch (BusinessException e)
+            {
+                await transaction.RollbackAsync(cancellationToken);
+                throw new BusinessException(e.Message);
             }
             catch (Exception e)
             {

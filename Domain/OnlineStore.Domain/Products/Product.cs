@@ -1,4 +1,5 @@
-﻿using OnlineStore.Domain.Orders;
+﻿using OnlineStore.Domain.Exceptions;
+using OnlineStore.Domain.Orders;
 using OnlineStore.Domain.Services;
 
 namespace OnlineStore.Domain.Products
@@ -17,7 +18,7 @@ namespace OnlineStore.Domain.Products
         public Product(string title, double price, decimal discount, IProductDomainService productDomainService)
         {
             if (productDomainService.TitleIsDuplicate(title).Result)
-                throw new Exception("Duplicated Title");
+                throw new DuplicatedProductNameException();
             Title = title;
             Price = price;
             Discount = discount;
